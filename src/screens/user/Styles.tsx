@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { Colors, FontFamily, FontSizes } from '../../styles/AppStyle';
+import { StyleSheet } from "react-native";
+import { Colors, FontFamily, FontSizes } from "../../styles/AppStyle";
 
 export const styles = StyleSheet.create({
   // Start User List Styles
@@ -8,53 +8,54 @@ export const styles = StyleSheet.create({
   },
   centered: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f5f5f5',
+    justifyContent: "center",
+    alignItems: "center",
   },
   searchContainer: {
     padding: FontSizes(16),
     backgroundColor: Colors.white,
     borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
+    borderBottomColor:Colors.silverGray ,
     fontFamily: FontFamily.PoppinsRegular,
   },
   searchInput: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: Colors.white,
     borderRadius: 25,
     paddingHorizontal: 20,
     paddingVertical: 12,
     fontSize: FontSizes(14),
-    color: '#333',
+    color: Colors.textPrimary,
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: Colors.silverGray,
   },
   footerLoader: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     padding: 16,
   },
   footerText: {
     marginLeft: 8,
-    color: '#666',
+    color: Colors.textSecondary,
     fontSize: FontSizes(14),
+    fontFamily: FontFamily.PoppinsRegular,
   },
   emptyContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     paddingTop: 50,
   },
   emptyText: {
     fontSize: FontSizes(16),
-    color: '#999',
+    fontFamily: FontFamily.PoppinsRegular,
+    color: Colors.textMuted,
   },
   // End User List Styles
 
   // Start Card Styles
   card: {
-    flexDirection: 'row',
+    flexDirection: "row",
     backgroundColor: Colors.white,
     borderRadius: 12,
     padding: 16,
@@ -74,8 +75,8 @@ export const styles = StyleSheet.create({
     height: 50,
     borderRadius: 30,
     backgroundColor: Colors.primary,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginRight: 16,
   },
   avatarText: {
@@ -85,7 +86,7 @@ export const styles = StyleSheet.create({
   },
   infoContainer: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   name: {
     fontSize: FontSizes(13),
@@ -104,71 +105,112 @@ export const styles = StyleSheet.create({
     fontFamily: FontFamily.PoppinsRegular,
   },
 
-   // End Card Styles
+  // End Card Styles
 
-// user details screen 
-   header: {
+  // user details screen
+  header: {
     backgroundColor: Colors.primary,
     paddingVertical: 30,
-    alignItems: 'center',
+    alignItems: "center",
   },
   avatar: {
     width: 90,
     height: 90,
     borderRadius: 45,
     backgroundColor: Colors.white,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginBottom: 12,
   },
   dAvatarText: {
-    fontSize: 36,
-    fontWeight: 'bold',
-    color: '#f4511e',
+    fontSize: FontSizes(30),
+    fontFamily: FontFamily.PoppinsSemiBold,
+    color: Colors.primary,
   },
   dName: {
-    fontSize: 22,
-    color: '#fff',
-    fontWeight: 'bold',
+    fontSize: FontSizes(20),
+    color: Colors.white,
+    fontFamily: FontFamily.PoppinsMedium,
   },
   username: {
-    color: '#fff',
+    color: Colors.white,
   },
   dContainer: {
     padding: 20,
   },
   label: {
-    color: '#999',
+    color: Colors.lightGrey,
     marginTop: 12,
+    fontFamily: FontFamily.PoppinsRegular,
+    fontSize: FontSizes(13),
   },
   value: {
-    fontSize: 16,
+    fontSize: FontSizes(13),
     marginBottom: 6,
+    fontFamily: FontFamily.PoppinsRegular,
+    color: Colors.black,
   },
   buttonRow: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginTop: 20,
   },
   button: {
     flex: 1,
     padding: 14,
     borderRadius: 25,
-    alignItems: 'center',
+    alignItems: "center",
     marginHorizontal: 6,
   },
   editBtn: {
     backgroundColor: Colors.primary,
+    fontFamily: FontFamily.PoppinsRegular,
+    fontSize: FontSizes(12),
   },
   saveBtn: {
     backgroundColor: Colors.primary,
+    fontFamily: FontFamily.PoppinsRegular,
+    fontSize: FontSizes(12),
   },
   cancelBtn: {
     borderWidth: 1,
-    borderColor: '#f4511e',
-    backgroundColor: '#fff',
+    borderColor: Colors.red,
+    backgroundColor: Colors.white,
+    fontSize: FontSizes(12),
   },
   btnText: {
-    color: '#fff',
-    fontWeight: '600',
+    color: Colors.white,
+    fontFamily: FontFamily.PoppinsSemiBold,
+    fontSize: FontSizes(12),
+  },
+
+// Form 
+
+  formContainer: {
+    marginBottom: 14,
+  },
+  formLabel: {
+    fontSize: FontSizes(12),
+    color: Colors.textMuted,
+    fontFamily: FontFamily.PoppinsRegular,
+    marginBottom: 4,
+    textTransform: "uppercase",
+  },
+  formInput: {
+    borderWidth: 1,
+    borderColor: Colors.silverGray,
+    borderRadius: 8,
+    padding: 12,
+    fontSize: FontSizes(13),
+    backgroundColor: Colors.backgroundWhite,
+    fontFamily: FontFamily.PoppinsRegular,
+  },
+  formErrorInput: {
+    borderColor: Colors.red,
+  },
+  formErrorText: {
+    borderColor: Colors.red,
+    fontSize: FontSizes(12),
+    fontFamily: FontFamily.PoppinsRegular,
+    marginTop: 4,
   },
 });

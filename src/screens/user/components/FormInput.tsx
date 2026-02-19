@@ -1,5 +1,11 @@
-import React from 'react';
-import { View, Text, TextInput, StyleSheet, TextInputProps } from 'react-native';
+import React from "react";
+import {
+  View,
+  Text,
+  TextInput,
+  TextInputProps,
+} from "react-native";
+import { styles } from "../Styles";
 
 interface Props extends TextInputProps {
   label: string;
@@ -8,43 +14,15 @@ interface Props extends TextInputProps {
 
 const FormInput: React.FC<Props> = ({ label, error, ...props }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.label}>{label}</Text>
+    <View style={styles.formContainer}>
+      <Text style={styles.formLabel}>{label}</Text>
       <TextInput
-        style={[styles.input, error && styles.errorInput]}
+        style={[styles.formInput, error && styles.formErrorInput]}
         {...props}
       />
-      {!!error && <Text style={styles.errorText}>{error}</Text>}
+      {!!error && <Text style={styles.formErrorText}>{error}</Text>}
     </View>
   );
 };
 
 export default FormInput;
-
-const styles = StyleSheet.create({
-  container: {
-    marginBottom: 14,
-  },
-  label: {
-    fontSize: 12,
-    color: '#999',
-    marginBottom: 4,
-    textTransform: 'uppercase',
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: '#e0e0e0',
-    borderRadius: 8,
-    padding: 12,
-    fontSize: 16,
-    backgroundColor: '#fafafa',
-  },
-  errorInput: {
-    borderColor: 'red',
-  },
-  errorText: {
-    color: 'red',
-    fontSize: 12,
-    marginTop: 4,
-  },
-});
