@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   View,
   TouchableOpacity,
@@ -7,10 +7,10 @@ import {
   ViewStyle,
   TextStyle,
   Text,
-} from 'react-native';
-import { Colors, FontFamily, FontSizes } from '../styles/AppStyle';
-import MaterialIcons from '@react-native-vector-icons/material-icons';
-import { goBack } from '../navigation/NavigationService';
+} from "react-native";
+import { Colors, FontFamily, FontSizes } from "../styles/AppStyle";
+import MaterialIcons from "@react-native-vector-icons/material-icons";
+import { goBack } from "../navigation/NavigationService";
 
 interface HeaderProps {
   title: string;
@@ -30,7 +30,7 @@ interface HeaderProps {
 }
 
 const AppHeader: React.FC<HeaderProps> = ({
-  title = '',
+  title = "",
   titleStyle,
   titleContainer,
   titleContainerStyle,
@@ -50,14 +50,16 @@ const AppHeader: React.FC<HeaderProps> = ({
       {/* Left Icon */}
       {(leftSide || backIcon) && (
         <TouchableOpacity
-         testID="header-left"
+          testID="header-left"
           style={[styles.leftIconContainer, leftSideContainerStyle]}
           onPress={onLeftPress ? onLeftPress : () => goBack()}
         >
           {leftCustomIcon ? (
             leftCustomIcon
           ) : backIcon ? (
-            <MaterialIcons name="arrow-back" size={24} color={Colors.white} />
+            <View style={styles.backIcon}>
+              <MaterialIcons name="arrow-back" size={24} color={Colors.white} />
+            </View>
           ) : (
             <></>
           )}
@@ -95,32 +97,40 @@ const AppHeader: React.FC<HeaderProps> = ({
 const styles = StyleSheet.create({
   background: {
     height: 50,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor:Colors.primary
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    // backgroundColor:Colors.primary
   },
   leftIconContainer: {
-    height: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 10,
+    height: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+    // backgroundColor:'red'
   },
   rightIconContainer: {
-    height: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: "100%",
+    alignItems: "center",
+    justifyContent: "center",
     paddingHorizontal: 10,
   },
   titleContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   titleStyle: {
     fontFamily: FontFamily.PoppinsSemiBold,
     color: Colors.white,
     fontSize: FontSizes(16),
+  },
+  backIcon: {
+    height: 36,
+    width: 36,
+    borderRadius: 100,
+    backgroundColor: "rgba(244, 253, 250, 0.10)",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 

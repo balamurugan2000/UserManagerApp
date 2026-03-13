@@ -31,7 +31,7 @@ const AppStyle = {
   Colors: {
     white: "#FFFFFF",
     black: "#000000",
-    primary: "#265A8F",
+    primary: "#212737",
     lightGrey: "#808080",
     whiteSmoke: "#C0C0C0",
     red: "red",
